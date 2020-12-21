@@ -1,2 +1,2 @@
-# pokemonGame
-A pokemon battle replicator you can play in your Python terminal!
+# Pokemon Battle
+A small project I made in Python. Open the file in your terminal to play.
