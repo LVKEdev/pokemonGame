@@ -232,7 +232,7 @@ def play():
                 generateDisplay(userPkm, rivalPkm)
                 break
     if (userPkm.hp==0):
-        print(userPkm.name+capitalize() + " fainted! " + rivalPkm.name.capitalize() + " is the winner!")
+        print(userPkm.name.capitalize() + " fainted! " + rivalPkm.name.capitalize() + " is the winner!")
     else:
         print(rivalPkm.name.capitalize() + " fainted! " + userPkm.name.capitalize() + " is the winner!")
 
