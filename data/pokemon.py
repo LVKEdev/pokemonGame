@@ -22,21 +22,18 @@ class Pokemon:
     self.reverse2 = row[16]
     self.reverse3 = row[17]
 
-with open("pokemon.csv") as fp:
-  reader = csv.reader(fp, delimiter=",", quotechar='`')
-  # next(reader, None)  # if we want to skip the header row
-  pokemon_data = [row for row in reader]
-  print(pokemon_data)
-  pokeList = [Pokemon(pokemon_data[i]) for i in range(1, len(pokemon_data))]
-  print(pokeList[0].name, pokeList[0].type)
-
 class Reader:
   def __init__(self):
     self.sources = []
   
   def addSource(self, name, file):
-    source = Data(name).load(file).byName
+    source = Data(name).load(file)
     self.sources.append(source)
+
+  def selectPokemon(self):
+    self.sources.index
+    print('Select a pokemon')
+    # drop off point -- continue here
 
 class Data:
   def __init__(self, name):
@@ -45,8 +42,20 @@ class Data:
   def load(self, file):
     with open(file) as f:
       content = csv.reader(f, delimiter=",", quotechar="`")
-      self.data = content
-      self.columns = content[0]
-      self.rows = content[1:]
-      self.byName = [{"name":row[0], "data":row[1:]} for row in self.rows]
+      self.data = [row for row in content]
+      self.columns = self.data[0]
+      self.rows = self.data[1:]
+      return self
+      
+  def vals(self):
+    self.byKey = [{"name":row[0], "data":row[1:]} for row in self.rows]
+    return self
 
+def main():
+  reader = Reader()
+  reader.addSource('pokemon', 'pokemon.csv')
+  pokemon = reader.sources[0].vals().byKey
+  print([pokemon[i]['name'] for i in range(0, len(pokemon))])
+  # also continue here
+  
+main()
