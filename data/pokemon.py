@@ -1,3 +1,4 @@
+import os
 import csv
 
 class Pokemon:
@@ -28,4 +29,21 @@ with open("pokemon.csv") as fp:
   print(pokemon_data)
   pokeList = [Pokemon(pokemon_data[i]) for i in range(1, len(pokemon_data))]
   print(pokeList[0].name, pokeList[0].type)
+
+class Reader:
+  def __init__(self, file):
+    self.sources, self.cols, self.rows = [], [], []
+    with open(file) as f:
+      self.data = csv.reader(f, delimiter=",", quotechar="`")
+  
+  def addSource(self, name, data):
+    self.sources.append(name, DataSource(data))
+
+class DataSource:
+  def __init__(self, content):
+    self.columns = content[0]
+    self.rows = content[1:]
+  
+  def read(self):
+    self.byName = [{"name": row[0], "data": row[1:]} for row in self.rows]
 

@@ -1,6 +1,6 @@
 name,type,hp,attack,defence,spAttack,spDefence,speed,move1,move2,move3,move4,display1,display2,display3,reverse1,reverse2,reverse3
-pikachu,electric,3,,40,50,50,90,thunderbold,quick attack,tail whip,nasty plot`,` |\\__/| `,` {+OO+} `,`  /  \\  `,` |\\__/| `,` {+OO+} `,`  /  \\  `
+pikachu,electric,3,55,40,50,50,90,thunderbold,quick attack,tail whip,nasty plot`,` |\\__/| `,` {+OO+} `,`  /  \\  `,` |\\__/| `,` {+OO+} `,`  /  \\  `
 squirtle,water,44,48,65,50,64,43,water gun,tail whip,bite,hydro pump`,`   ___  `,`/_|_\\('>`,` "   "  `,`   ____ `,`<'(/_|_\\`,`   "  " `
 bulbasaur,grass,45,49,49,65,65,45,vine whip,razor leaf,tackle,growl`,`||\\\\    `,`(++[O.O]`,` "  "   `,`    //||`,`[0.0]++)`,`   "  " `
-charmander,fire,39,52,43,60,50,65,growl,ember,inferno,slash`,`('u') * `,`(^ ^)// `,` " "    `,`('u') * `,`(^ ^)// `,` " "    `
 espeon,psychic,65,65,60,130,95,110,bite,tackle,tail whip,psybeam`,`\\\\__/   `,`('-') \/`,`(^&^)_//`,`\\\\__/   `,`('-') \/`,`(^&^)_//`
+charmander,fire,39,52,43,60,50,65,growl,ember,inferno,slash`,`('u') * `,`(^ ^)// `,` " "    `,`('u') * `,`(^ ^)// `,` " "    `
