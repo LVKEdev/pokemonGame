@@ -1,3 +1,6 @@
+# pokémon data thanks to veekun!!! 
+# https://github.com/veekun/pokedex.git
+
 import os
 import csv
 
