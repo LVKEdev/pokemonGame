@@ -448,7 +448,7 @@ def attack(move, user, rival):
             message+="But it missed!"
     elif(move.category == "ph"):
         if(move.name == "flail"):
-            move.power = 2-1.75*(use.hp/user.hpFull)
+            move.power = 2-1.75*(user.hp/user.hpFull)
         if(accuracy < move.accuracy):
             damage = round((move.power*10*(user.attack/rival.defence)+2)*multiplier)
             if (damage > rival.hp):
