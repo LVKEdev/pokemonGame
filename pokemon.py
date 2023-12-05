@@ -291,7 +291,9 @@ def play():
         choice = int(choice)
         pkmList = (Pokemon("pikachu"), Pokemon("squirtle"), Pokemon("bulbasaur"), Pokemon("charmander"), Pokemon("espeon"), Pokemon("mudkip"), Pokemon("pidgey"), Pokemon("bunnelby"), Pokemon("meowth"))
         userPkm = pkmList[choice-1]
-        rivalPkm = pkmList[random.randint(0,9)]
+        rivalPkm = pkmList[random.randint(0,8)]
+        if userPkm==rivalPkm:
+            rivalPkm=Pokemon(rivalPkm.name)
         clearScreen()
         print ("You chose..."+userPkm.name.capitalize()+"! Your rival is..."+rivalPkm.name.capitalize()+"!")
         while (True):
@@ -425,7 +427,7 @@ def defend(move, user, rival):
     print(message)
 
 def attack(move, user, rival):
-    message = user.name.capitalize()+" used "+move.name+"! "
+    message = user.name.capitalize()+" used "+move.name.capitalize()+"! "
     if(move.type=="electric" and (rival.type=="electric" or rival.type=="grass")) or (move.type=="water" and (rival.type=="water" or rival.type=="grass")) or (move.type=="grass" and (rival.type=="grass" or rival.type=="fire")) or (move.type=="fire" and (rival.type=="water" or rival.type=="fire")) or (move.type=="psychic" and rival.type=="psychic") or (move.type=="flying" and rival.type=="electric") or (move.type=="grass" and rival.type=="flying"):
         multiplier = 0.5
     elif(move.type=="electric" and rival.type=="water") or (move.type=="water" and rival.type=="fire") or (move.type=="grass" and rival.type=="water") or (move.type=="fire" and rival.type=="grass") or (move.type=="dark" and rival.type=="psychic") or (move.type=="flying" and rival.type=="grass") or (move.type == "electric" and rival.type == "flying"):
